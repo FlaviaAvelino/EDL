@@ -113,6 +113,22 @@ package javatipos;
 >> a + 20
 >> 30
 ```
+### Conversão de Tipos em Java 
+```java
+package javatipos;
+    public class JavaTipos {
+        public static void main(String[] args) {
+                String a = "10";
+                a = a + 20;
+               System.out.println("a = " + a);
+                a = "10";
+                int b;
+                b = Integer.parseInt(a);
+                b = b + 20;
+                System.out.println("b = " + b);          
+    }
+}
+```
 ## Metaprogramação
 * Adicionando um novo método à classe String
 ```groovy 
