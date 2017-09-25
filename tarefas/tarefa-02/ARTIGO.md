@@ -139,14 +139,6 @@ else  if (lang == 'Swedish') println 'Hej'
 }
 
 'Chamando o diga Olá por uma String'.digaOla('Swedish')
-
-class Pessoa{
-String nome, sobrenome
-}
-
-Pessoa.metaClass.getNomeCompleto = { nome + ", " + sobrebome }
-
-println new Pessoa(nome:'groovy', sobrenome : 'Grails').getNomeCompleto()
 ```
 * Adicionando comportamentos diferentes em objetos da mesma classe
 ### Em Groovy
