@@ -55,6 +55,17 @@ def salve (nome) {
  def name = 'Steve'
  cumprimentar (nome)
 ```
+9. Importação default. Os seguintes pacotes e classes são importados por default, sendo desnecessário usar *import* explícito para utilizá-los:
+* java.io
+* java.lang
+* java.math.BigDecimal
+* java.math.BigInteger
+* java.net
+* java.util
+* java.lang
+* groovy.lang
+* groovy.util
+
 A linguagem Groovy utiliza o conceito de programação orientada a protótipo, que se trata de uma forma de programação orientada a objeto onde novos objetos são criados a partir de um protótipo. E eles podem ter sua estrutura alterada em tempo de execução; o comportamento de um novo objeto é realizado através de um processo de expansão do comportamento de objetos já existentes.
 
 ## MetaProgramação
