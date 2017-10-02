@@ -1,9 +1,8 @@
 # Groovy
 
 # Introdução
-O Groovy é uma linguagem orientada a objeto e dinamicamente tipada voltada para a plataforma Java e destinada a melhorar a produtividade do desenvolvedor apresentando uma sintaxe concisa, familiar e fácil de aprender. Integra-se perfeitamente com qualquer programa Java e entrega imediatamente aos recursos poderosos do seu aplicativo, incluindo recursos de script, criação de idioma específica do domínio, tempo de execução e programação de tempo de compilação e programação funcional.
+O Groovy é uma linguagem orientada a objeto e dinamicamente tipada voltada para a plataforma Java e destinada a melhorar a produtividade do desenvolvedor apresentando uma sintaxe concisa, familiar e fácil de aprender. A linguagem Groovy utiliza uma sintaxe similar à de Java, é compilada dinamicamente para bytecode Java, e integra-se transparentemente com outros códigos e bibliotecas Java.
 
-A linguagem Groovy utiliza uma sintaxe similar à de Java, é compilada dinamicamente para bytecode Java, e integra-se transparentemente com outros códigos e bibliotecas Java.
 # Origens e Influências
 Seu surgimento se deu em agosto de 2003 quando James Strachan escreveu em seu blog o primeiro artigo sobre o que viria a ser o Groovy. Segundo James a ideia inicial era fazer uma linguagem dinâmica, que fosse compilada diretamente em classes Java, e que tivesse toda a produtividade e elegância encontrada em Ruby e Python”. 
 A versão numerada 1.0 foi lançada em 2 de janeiro de 2007. Em 2 de julho de 2012, o Groovy 2.0 foi lançado apresentando novos recursos tais como a adição de compilação estática e verificação do tipo estático. Até hoje tem a versão 2.4 como o principal lançamento. Além de Java, Ruby e Phyton, Suas principais influências para a criação do Groovy foram Pearl, Smalltalk e Obective-C.
@@ -24,16 +23,26 @@ Groovy tem as seguintes características:
 # Avaliação Comparativa
 
 ## Groovy vs Java
-1. Na Linguagem Java você é obrigado a digitar private para declarar atributos privados. No Groovy todos os atributos de uma classe são por padrão private.
+1.  No Groovy todos os atributos de uma classe são por padrão publico.
+
 2. Em Java para declarar um método público é necessário digitar public. No Groovy não, pois por padrão já são públicos.
+
 3. Na linguagem Java é obrigatório a digitar os get’s e set’s para expor os atributos dos objetos. No Groovy não, eles serão automaticamente e dinamicamente gerados.
+
 4. O Groovy é um superconjunto do Java, o que significa que um programa Java funcionará bem no ambiente Groovy, mas vice-versa pode ou não ser executado, dependendo se está escrito em groovy ou Java.
-5. Para tornar as coisas concisas, o Groovy forneceu vários métodos de utilidade, por exemplo, para imprimir algo no console, em vez de usar System.out.println , você pode simplesmente usar println () . 
-6. Outra diferença importante entre o Groovy e o Java é que o groovy suporta a substituição de variáveis usando aspas duplas, ou seja, você pode imprimir conteúdo dinâmico sem usar concatenação de string, por exemplo:
-```groovy
-                               println ( “Bom dia $ nome!” );
-```
-7. Especificar o tipo. Em Java é obrigatório, mas em Groovy é opcional. Em Groovy é possível determinar uma tipagem dinâmica utilizando a palavra chave ***def***. Em Java se o tipo não for especificado o código não é compilado.
+
+5. Quanto à legibilidade temos as seguintes características:
+    5.1 O Groovy fornece métodos de fácil escrita, como:
+	```groovy
+	System.out.println(“ola”)    //em java
+	println ()*		//em groovy
+	```
+
+    5.2 Groovy suporta a suporta a substituição de variáveis usando aspas duplas, ou seja, você pode imprimir conteúdo dinâmico sem usar concatenação de string, por exemplo: 
+	*println ( “Bom dia $nome!” );*
+
+    5.3 Especificar o tipo. Em Java é obrigatório, mas em Groovy é opcional. Em Groovy é possível determinar uma tipagem dinâmica utilizando a palavra chave ***def***. Em Java se o tipo não for especificado o código não é compilado.
+    
 ```groovy
 classe saudacoes {
      		def salve (nome) {
@@ -47,15 +56,16 @@ classe saudacoes {
     		}
 	}
 ```
-8. Em Java, você precisa do método principal para tornar uma classe executável, no Groovy você não precisa disso. Uma vez que o Groovy é uma linguagem de script, existe automaticamente uma classe de wrapper chamada Script para cada programa. Isso significa que você pode se livrar de sua própria classe de embrulho, bem como o método principal, assim:
+6. Em Java, você precisa do método principal para tornar uma classe executável, no Groovy você não precisa disso. Uma vez que o Groovy é uma linguagem de script, existe automaticamente uma classe de wrapper chamada Script para cada programa. Isso significa que você pode se livrar de sua própria classe de embrulho, bem como o método principal, assim:
 ```groovy
 def salve (nome) {
          println ( "Bom dia $ nome!" );
  }
  def name = 'Steve'
  cumprimentar (nome)
+
 ```
-9. Importação default. Os seguintes pacotes e classes são importados por default, sendo desnecessário usar *import* explícito para utilizá-los:
+7. Importação default. Os seguintes pacotes e classes são importados por default, sendo desnecessário usar *import* explícito para utilizá-los:
 * java.io
 * java.lang
 * java.math.BigDecimal
@@ -66,14 +76,13 @@ def salve (nome) {
 * groovy.lang
 * groovy.util
 
-A linguagem Groovy utiliza o conceito de programação orientada a protótipo, que se trata de uma forma de programação orientada a objeto onde novos objetos são criados a partir de um protótipo. E eles podem ter sua estrutura alterada em tempo de execução; o comportamento de um novo objeto é realizado através de um processo de expansão do comportamento de objetos já existentes.
 
-## MetaProgramação
-O Groovy permite que classes e métodos sejam alterados em tempo de execução. Utiliza as regras provenientes do MOP (Meta-Object Protocol) para a realização da expansão de classes e objetos, já existentes, em tempo de execução. Ao criar uma metaclasse define-se o comportamento de certas classes e de suas instancias.
+## Exemplo de códigos representativos 
 
-# Exemplo de códigos representativos
+Os exemplos abaixo demonstram que a linguagem Groovy tem uma legibilidade maior que a do Java.
 
-### Hello World em Java
+### Hello World 
+- java
 ```java
 public class HelloWorld {
    public static void main(String[] args) {
@@ -81,11 +90,13 @@ public class HelloWorld {
    }
 }
 ```
-### Hello World em Groovy
+- groovy
 ```groovy
 println "Hello World!"
 ```
+
 ### Criando um List e um Map em Java
+ - java
 ```java
 List minhaLista = new ArrayList();
 minhaLista.add("maçã");
@@ -96,12 +107,14 @@ meuMap.put(3, "três");
 meuMap.put(6, "seis");
 meuMap.put(1, "um");
 ```
-### Criando um List e um Map em Groovy
+- groovy
 ```groovy
 List minhaLista = ["maçã", "laranja", "limão"]
 Map meuMap = [3: "três", 6: "seis", 1: "um"];
 ```
 
+### Conversão de Tipos 
+- java 
 ```java 
 package javatipos;
     public class JavaTipos {
@@ -117,8 +130,8 @@ package javatipos;
     }
 }
 ```
-### Conversão de Tipos em Groovy
-```groovy
+- groovy
+```
 >> a = "10"
 >> a + 20
 >> 1020
@@ -126,35 +139,184 @@ package javatipos;
 >> a + 20
 >> 30
 ```
-### Conversão de Tipos em Java 
+
+# Reflexão
+Reflexão é um recurso da API Java que possibilita aos aplicativos o acesso e a modificação do comportamento de aplicações que estão rodando na Java Virtual Machine.
+Em Java, o pacote java.lang.reflect permite exibir o nome de atributos e métodos pertencentes a uma classe, em tempo de execução.
+Uma classe pode acessar outras classes em tempo de execução, sem conhecer sua definição no momento da compilação. Informações relativas à esta definição, como seus construtores, métodos e atributos, podem ser facilmente acessados através de métodos de reflexão da API Java. 
+Em Groovy isso é feito de forma mais simples por se tratar de uma linguagem com comportamento dinâmico. Podemos perceber essa diferença nos exemplos abaixo:
+
+### Java
+ _Classe Pessoa_
 ```java
-package javatipos;
-    public class JavaTipos {
-        public static void main(String[] args) {
-                String a = "10";
-                a = a + 20;
-               System.out.println("a = " + a);
-                a = "10";
-                int b;
-                b = Integer.parseInt(a);
-                b = b + 20;
-                System.out.println("b = " + b);          
+package projetoexemplo;
+
+public class Pessoa {
+    
+    public String nome;
+    public int idade;
+    private String telefone;
+    private String endereco;
+    
+    public String getNome() { return nome;  }
+
+    public void setNome(String nome) { this.nome = nome;}
+
+    public int getIdade() { return idade;  }
+
+    public void setIdade(int idade) { this.idade = idade;}
+    
+    public String getEndereco() { return endereco; }
+
+    public void setEndereco(String endereco) { this.endereco = endereco; }
+    
+    public String getTelefone() { return telefone;}
+
+    public void setTelefone(String telefone) { this.telefone = telefone; }
+}
+
+```
+
+_Classe Main_
+```java
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Parameter;
+Import projetoexemplo.Pessoa;
+
+
+public class ProjetoExemplo {
+    public static void main(String[] args) {
+          
+        Class classe = Pessoa.class;
+        Pessoa p1 = new  Pessoa();   
+        p1.setNome("Ana Paula");
+        p1.setIdade(30);
+        p1.setTelefone("25698571");
+                
+    //Recuperando informações da classe pessoa
+        for (Field field : classe.getDeclaredFields()){   
+            String campo = field.getName();
+            Class tipo = field.getType();
+            String nomeTipo = tipo.getTypeName();
+            System.out.println("Campo: " + campo + " ,  Tipo: " + nomeTipo ); 
+            System.out.println("Acessibilidade: " +  Modifier.toString(field.getModifiers()));
+            System.out.println("Tem acesso: " + field.isAccessible());
+            
+            try {               
+                //field.setAccessible(true); 
+                System.out.println("valor = " + field.get(p1) + "\n");                              
+            } catch (Exception e) {
+                 System.out.println("valor = não pode acessar valor\n");
+            }      
+         }
+        
+        System.out.println("");
+     //Recuperando os metodos da classe pessoa
+        for (Method method : classe.getDeclaredMethods()){
+            String nome = method.getName();
+            Class tipoRetorno = method.getReturnType();           
+
+            System.out.println("Método : " + nome + "  Tipo de retorno: " + tipoRetorno);
+            System.out.println("Acessibilidade: " +  Modifier.toString(method.getModifiers()));
+            
+            //Recuperandos os parâmetros do método
+            Class parametros[] = method.getParameterTypes();
+            
+            System.out.println("Parâmetros: ");
+            for (Class c : parametros){
+                System.out.println("\t" + c.getName());        
+            }
+            System.out.println("");      
+        }
+    } 
+ }   
+```
+
+### Groovy
+```groovy
+import java.lang.reflect.Modifier
+
+class Pessoa {
+    String nome
+    String endereco
+    String telefone
+    
+    Pessoa(String Nome, String Endereco, String Telefone){
+        this.nome = Nome
+        this.endereco = Endereco
+        this.telefone = Telefone
     }
+    
+    def digaOla(){ return 'Ola Pessoal!!!'  }
+}
+
+Pessoa.metaClass.idade = 0
+
+def p1 = new Pessoa("Ana Paula", "Avenida Maracana", "25368547")
+
+Pessoa.metaClass.setIdade(){int idade -> delegate.idade = idade}
+
+Pessoa.metaClass.Mudar_Telefone(){String num -> delegate.telefone = num}
+
+p1.setIdade(30)
+
+ println "Nome: " + p1.nome
+ p1.Mudar_Telefone("123568875")
+ println "Telefone: " + p1.telefone
+ println "Idade: " + p1.idade
+ println p1.digaOla()
+ 
+println "\n METODOS \n"
+println Pessoa.metaClass.getMethods().name.sort().unique() + "\n\n"
+
+List<MetaMethod> listaMetodos =  Pessoa.metaClass.getMethods()
+
+for (MetaMethod m : listaMetodos){
+    println "Nome='" + m.name + "'   retorno= " + m.getReturnType()
+    println "Assinatura : "+ m.getSignature()
+    println "Parametros : \n\t" + m.getParameterTypes() 
+    println "Acesso= " + Modifier.toString(m.getModifiers()) + "\n"
+}
+
+println "\n ATRIBUTOS\n"
+println Pessoa.metaClass.getProperties().name.unique()
+println " "
+
+List<MetaProperty> listaPropriedade =  Pessoa.metaClass.getProperties()
+
+for (MetaProperty p : listaPropriedade){
+    println "Nome='" + p.name + "'   Tipo= " + p.type 
+    println "Acesso= " + Modifier.toString(p.getModifiers()) + "\n"
 }
 ```
-## Metaprogramação
+
+# Prototipação e MetaProgramação em Groovy
+
+O conceito de Prototipação trata-se de uma forma de programação orientada a objeto onde novos objetos são criados a partir da clonagem de objetos existentes que são os chamados protótipos. Permite que novos objetos tenham novos comportamentos através do processo de expansão do comportamento de objetos já existentes.
+
+Quanto às classes, elas podem ter a adição de novas funcionalidades através da extensão de classes já existentes. Os objetos herdam essas novas funcionalidades, porem esses podem ter funcionalidades exclusivas deles, a partir de sua expansão. Toda sua estrutura pode ser alterada em tempo de execução.
+
+A funcionalidade Metaprogramação presente em Groovy permite utilizar o conceito de prototipação, porém não completamente, o que permite é apenas a expansão de classes e objetos em tempo de execução. 
+
+O uso de Metaclasse permite que classes e objetos sejam alterados em tempo de execução. Utiliza as regras provenientes do MOP (Meta-Object Protocol) para a realização da expansão. Ao utilizar **metaClass** em uma classe define-se o  novo método da classe e de suas instancias. Ao utilizar **metaClass** em um objeto, apenas este terá o método ou atributo, ou seja, será uma característica exclusiva daquele objeto.
+
+
+### Exemplo de códigos representativos 
 * Adicionando um novo método à classe String
-```groovy 
+
+```groovy
 String.metaClass.digaOla = { lang -> if (lang == 'English') println 'Hello'
 else  if (lang == 'Swedish') println 'Hej'
 }
 
 'Chamando o diga Olá por uma String'.digaOla('Swedish')
 ```
+
 * Adicionando comportamentos diferentes em objetos da mesma classe
-### Em Groovy
 ```groovy
-class Animal {
+ class Animal {
   String nome
   String tipo
   int idade
@@ -184,6 +346,7 @@ println "Idade: " + cat.idade
 println "Tipo: " + cat.tipo
 println "Raca: " + cat.raca
 cat.miar()
+assert cat.miar() == "miau miau"
 
 println " " 
 println "Caracteristicas Cachorro"
@@ -192,137 +355,10 @@ println "Idade: " + dog.idade
 println "Tipo: " + dog.tipo
 println "Raca: " + dog.raca
 dog.latir()
+assert dor.latir() == "au au"
 
-println " "
-
-assert cat.miar() == "au au"
-```
-### Em Java
-* Classe Animal
-```java
-package javaclasses;
-
-public class Animal {
-    private String nome;
-    private String tipo;
-    private int idade;
-        
-    Animal (String nome, int idade, String tipo){
-      this.nome = nome;
-      this.idade = idade;  
-      this.tipo = tipo;
-  }
-    
-     public String getNome() { return this.nome;}
-    
-      public int getIdade() { return this.idade;}
-       
-      public String getTipo() { return this.tipo;}              
-}
-```
-* Classe Gato
-```java
-package javaclasses;
-
-public class Gato extends Animal{
-    
-    private String raca;
-    
-    Gato (String nome, int idade, String tipo){
-        super(nome, idade, tipo);
-    }
-    
-    void miar(){ System.out.println("miau miau");
-    }
-    
-    @Override 
-    public String getNome() {
-        return super.getNome();
-    }
-    
-    @Override 
-      public int getIdade() {
-        return super.getIdade();
-    }
-      
-    @Override    
-      public String getTipo() {
-        return super.getTipo();
-    }
-    
-    public String getRaca() { return this.raca; }
-      
-    public void setRaca(String raca) { this.raca = raca;}     
-}
-```
-* Classe Cachorro
-```java
-package javaclasses;
-
-public class Cachorro extends Animal{
-    
-    private String raca;
-    
-    Cachorro (String nome, int idade, String tipo){
-        super(nome, idade, tipo);
-    }
-    
-    void latir(){System.out.println("au au");}
-    
-    @Override
-    public String getNome() {
-        return super.getNome();
-    }
-    
-    @Override
-    public int getIdade() {
-        return super.getIdade();
-    }
-    
-    @Override
-    public String getTipo() {
-       return super.getTipo();
-    }
-       
-    public String getRaca() { return this.raca;}
-     
-    public void setRaca(String raca) { this.raca = raca;}    
-}
-```
-* Programa Principal
-```java
-package javaclasses;
-
-public class JavaClasses {
-
-    public static void main(String[] args) {
-        
-        Gato cat = new Gato("Felix", 2, "Gato");    
-        Cachorro dog = new Cachorro("Bob", 1, "Cachorro");
-        
-        cat.setRaca("siames" );
-        dog.setRaca("vira-lata");
-        
-        System.out.println("Caracteristicas Gato");
-        System.out.println("Nome: " + cat.getNome());
-        System.out.println("Idade: " + cat.getIdade());
-        System.out.println("Tipo: " + cat.getTipo());
-        System.out.println("Raca: " + cat.getRaca());
-        cat.miar();
-        
-        System.out.println(" ");
-
-        System.out.println("Caracteristicas Cachorro");
-        System.out.println("Nome: " + dog.getNome());
-        System.out.println("Idade: " + dog.getIdade());
-        System.out.println("Tipo: " + dog.getTipo());
-        System.out.println("Raca: " + dog.getRaca());
-        dog.latir();
-    }  
-}
 ```
 * Adicionando novos atributos em classe e objetos
-### Em Groovy
 ```groovy
 class Pessoa {
   String nome
@@ -366,133 +402,11 @@ println "Objeto p2 Caracteristicas"
 println "Nome = " + p2.nome
 println "Idade = " + p2.idade
 println "p2 telefone = " + p2.telefone
-println "Idioma = " + p2.idioma
+
 ```
-### Em Java
-* Classe Pessoa
-```java
-package javaexemplo;
-
-public class Pessoa {
-    
-    private String nome;
-    private int idade;
-  
-  Pessoa(String nome, int idade){
-      this.nome = nome;
-      this.idade = idade;  
-  }
-  
-  public String getNome() { return this.nome;}
-    
-  public int getIdade() { return this.idade;}   
-}
-```
-* Classe PessoaExtendido
-```java
-package javaexemplo;
-
-public class PessoaExtendido extends Pessoa{
-    
-    private int telefone;
-
-  PessoaExtendido(String nome, int idade){
-      super (nome, idade); 
-  }
-  
-  void Mudar_Telefone(int num ){
-      this.telefone = num;
-  }
-  
-  public int getTelefone() {return this.telefone;}
-  
-  @Override 
-      public String getNome() {
-        return super.getNome();
-      } 
-  
-  @Override 
-      public int getIdade() {
-        return super.getIdade();
-      } 
-}
-```
-* Programa PessoaMaisExtendido
-```java
-package javaexemplo;
-
-public class PessoaMaisExtendido extends PessoaExtendido{
-    
-    private String pais, idioma;
-    
-    PessoaMaisExtendido(String nome, int idade){
-       super (nome, idade); 
-    }
-    
-    public void setPais(String pais) { this.pais = pais;}
-        
-    void Meu_Pais(){System.out.println("Eu sou do pais: " + this.pais);}
-    
-    public void setIdioma(String idioma) { this.idioma = idioma;}    
-    
-    public String getIdioma() {return this.idioma;}
-    
-    
-@Override 
-      public String getNome() {
-        return super.getNome();
-      } 
-    @Override 
-      public int getIdade() {
-        return super.getIdade();
-      }
-     
-      @Override 
-      public int getTelefone() {
-        return super.getTelefone();
-      } 
-      
-      void Mudar_Telefone(int num ){
-        super.Mudar_Telefone(num);
-    }
-}
-```
-* Programa Principal
-```java
-package javaexemplo;
-
-public class JavaExemplo {
-
-    public static void main(String[] args) {
-        
-        PessoaExtendido p2 = new PessoaExtendido("Paulo", 30);
-        PessoaMaisExtendido p1 = new PessoaMaisExtendido("Ana", 22);
-        
-        p1.Mudar_Telefone(25709494);
-        p2.Mudar_Telefone(00000000);
-        
-        p1.setPais("Brasil");
-        p1.setIdioma("Portugues");
-        
-    System.out.println("Objeto p1 Caracteristicas");
-    System.out.println("Nome: " + p1.getNome());
-    System.out.println("Idade: " + p1.getIdade());
-    System.out.println("Telefone: " + p1.getTelefone());
-    System.out.println("Idioma: " + p1.getIdioma());
-    p1.Meu_Pais();
-    System.out.println(" ");
-
-    System.out.println("Objeto p2 Caracteristicas");
-    System.out.println("Nome: " + p2.getNome());
-    System.out.println("Idade: " + p2.getIdade());
-    System.out.println("Telefone: " + p2.getTelefone());
-    }   
-}
-```
-Percebe-se nos exemplos de Metaclasse e Conversãao de Tipos que para passar o código de Groovy pra Java necessita de uma reestruturação do código Java. Mostrando assim que Groovy é mais expressiva que Java.
 
 # Conclusão
-Embora seja uma linguagem de Script, para aqueles que já programam em Java, o Groovy se torna uma maneira amigável de programar, dada a sua familiaridade e a sua fácil integração com Java. É uma linguagem de fácil aprendizagem e é uma linguagem expressiva, concisa e legível. 
+Embora seja uma linguagem de Script, para aqueles que já programam em Java, o Groovy se torna uma maneira amigável de programar, dada a sua familiaridade e a sua fácil integração com Java. 
 
 # Bibliografia
 http://www.wikipedia.org/
@@ -522,4 +436,13 @@ https://stackoverflow.com/questions/2323699/groovy-prototype-object
 http://mrhaki.blogspot.com.br/2009/11/groovy-goodness-add-methods-dynamically.html
 
 http://groovy-lang.org/metaprogramming.html
+
+https://www.tutorialspoint.com/java/lang/class_getmethods.htm
+
+http://groovy-almanac.org/list-the-methods-of-a-groovy-class/
+
+http://groovy-lang.org/metaprogramming.html#_get_setmetaclass
+
+https://stackoverflow.com/questions/30666487/how-does-the-getmodifiers-method-calculate-the-value-for-multiple-modifiers
+
 
