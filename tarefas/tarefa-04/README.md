@@ -1,6 +1,6 @@
-#Guerra dos CupCakes - Tarefa 04
+# Guerra dos CupCakes - Tarefa 04
 
-##Objetivo:
+## Objetivo:
 
 Eliminar os inimigos atirando neles e não deixando que eles colidam com o jogador. Caso isso ocorra o jogo termina.
 
