@@ -29,7 +29,7 @@ function love.load()
 	-- Propriedade: semântica
 	-- Binding time: design
 	-- Explicação: Durante a design foi decidido que "true" seria uma palavra reservada e que significaria para representar valores lógicos, onde a 
-	--			       varável que atibuída a ele teria o valor boleano verdadeiro.
+	--	       varável que atibuída a ele teria o valor boleano verdadeiro.
 	
 	--Tiros
 	
@@ -84,7 +84,7 @@ end
 
       -- Nome: end
       -- Propriedade: semântica
-	    -- Binding time: desing
+      -- Binding time: desing
       -- Explicação: É Definida pela linguagem para indicar o fim de um bloco.
 
 
@@ -223,7 +223,7 @@ function colisoes()
 				pontos = pontos + 1
 			end 
 			
-			    -- Nome: variável "pontos"
+			          -- Nome: variável "pontos"
 				  -- Propriedade: valor
 				  -- Binding time: execução
 				  -- Explicação: A variável pontos tem seu valor incrementado durante o tempo de execução do jogo.
@@ -275,7 +275,7 @@ function planoDeFundoScrolling(dt)
 	
 end
 
-    -- Nome: função "function"
+          -- Nome: função "function"
 	  -- Propriedade: Semântica
 	  -- Binding Time: design
 	  -- Explicação: A semântica de uma função é definida antes de qualquer coisa do programa, em tempo de design da linguagem.
@@ -298,8 +298,8 @@ function iniciajogo(dt)
 		end
 	end
       -- Nome: then
-	    -- Propriedade: semântica
+      -- Propriedade: semântica
       -- Binding time: desing
       -- Explicação: Como sendo uma palavra reservada na linguagem para execução de retorno de função. 
-      --	           then é definido no tempo de desing da linguagem.
+      --	     then é definido no tempo de desing da linguagem.
 end
